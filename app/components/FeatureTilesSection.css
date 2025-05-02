@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0D0D0D;
+  color: #E0E0E0;
+}
+
+.feature-layout {
+  display: flex;
+  background-color: black;
+  background-image: radial-gradient(#7C4DFF15 1px, transparent 1px);
+  background-size: 30px 30px;
+  padding: 10rem 13rem;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.feature-sidebar {
+  flex: 1 1 300px;
+  max-width: 400px;
+  min-height: 600px;
+  background: linear-gradient(180deg, #111111, #1d0b2e);
+  padding: 2rem;
+  border-radius: 1rem;
+  color: #E0E0E0;
+  box-shadow: 0 0 20px #7C4DFF33;
+  border: 1px solid #2a2a2a;
+}
+
+.feature-sidebar h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.feature-sidebar p {
+  font-size: 1rem;
+  color: #A0A0A0;
+  margin-bottom: 1.5rem;
+}
+
+.feature-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-sidebar li {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.feature-tiles {
+  flex: 2 1 600px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.feature-tile {
+  background-color: #111;
+  background-image: repeating-linear-gradient(
+    to right,
+    #1a1a1a 0px,
+    #1a1a1a 1px,
+    transparent 1px,
+    transparent 30px
+  ),
+  repeating-linear-gradient(
+    to bottom,
+    #1a1a1a 0px,
+    #1a1a1a 1px,
+    transparent 1px,
+    transparent 30px
+  );
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  box-shadow: inset 0 0 0 1px #2a2a2a;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.feature-tile:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 12px #7C4DFF88;
+}
+
+.tile-text h3 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.tile-text p {
+  font-size: 0.85rem;
+  color: #888;
+  line-height: 1.4;
+}
+
+
+.cta-bar {
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .cta-primary {
+    background-color: #111;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    border: 1px solid #444;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: background 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .cta-primary span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.4s forwards;
+  }
+  
+  @keyframes reveal {
+    to {
+      filter: blur(0);
+      opacity: 1;
+      transform: translateY(0) rotateX(0);
+    }
+  }
+  
+  
+  
+  .cta-bar {
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .cta-primary {
+    background-color: #111;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    border: 1px solid #444;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .cta-primary .char {
+    display: inline-block;
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+  
+  .cta-primary:hover .char {
+    transform: translateY(-6px);
+    opacity: 1;
+  }
+  
+  .cta-primary .arrow {
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+    opacity: 1;
+  }
+  
+  .cta-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .cta-secondary {
+    border: 1px solid #444;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    background: transparent;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-secondary.filled {
+    background-color: #E0E0E0;
+    color: black;
+  }
+  
+  .cta-secondary .arrow {
+    font-size: 1.2rem;
+  }
+  .fancy-hover .char3d {
+  display: inline-block;
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.fancy-hover:hover .char3d {
+  transform: translateY(-8px);
+  opacity: 1;
+}
+
+

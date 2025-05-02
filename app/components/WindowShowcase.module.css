@@ -1,0 +1,156 @@
+/* Outer white background */
+.wrapper {
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1rem;
+    position: relative;
+  }
+  
+  /* Glowing gradient for background effect */
+  .glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(66, 7, 121, 0.15), transparent 70%);
+    z-index: 0;
+  }
+  
+  /* Centered heading and subtext */
+  .textContent {
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .textContent h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+  }
+  
+  .textContent p {
+    font-size: 1.2rem;
+    color: #9a9999;
+    line-height: 1.6;
+  }
+  
+  /* Border and container setup */
+  .borderWrapper {
+    background-color: #121212;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 960px;
+    z-index: 2;
+    transition: transform 0.3s ease;
+  }
+  
+  .borderWrapper:hover {
+    transform: scale(1.01);
+  }
+  
+  /* Container aspect ratio and rounding */
+  .container {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: linear-gradient(to bottom,rgba(70, 1, 70, 0.579),black) ;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Video positioning and animation */
+  .imageContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .windowImage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: linear-gradient(to bottom,rgba(70, 1, 70, 0.579),black) ;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition:  transform 0.01s ease;
+    border-radius: 1rem;
+  }
+  
+  .active {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  /* Button group styling */
+  .buttonGroup {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    z-index: 2;
+  }
+  
+  /* Shared button styles */
+  .button,
+  .activeButton {
+    position: relative;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 9999px;
+    border: 2px solid #B39DDB;
+    background-color: transparent;
+    color: #9c7bd6;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+  }
+  
+  /* Glowing background */
+  .button::after,
+  .activeButton::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: black;
+    /* background: linear-gradient(90deg, #7C4DFF, #E040FB); */
+    color: #9c7bd6;
+    opacity: 0.4;
+    filter: blur(20px);
+    z-index: -1;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Hover behavior */
+  .button:hover {
+    background-color: #7C4DFF;
+    color: #ffffff;
+    border-color: white;
+  }
+  
+  .button:hover::after {
+    opacity: 1;
+  }
+  
+  /* Active state */
+  .activeButton {
+    background-color: #3d096b;
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+  
+  .activeButton::after {
+    opacity: 0.8;
+  }
+  

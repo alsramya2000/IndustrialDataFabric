@@ -1,0 +1,8 @@
+@tailwind utilities;
+
+/* Optional smoothing */
+html, body {
+  scroll-behavior: smooth;
+  background: white;
+}
+
