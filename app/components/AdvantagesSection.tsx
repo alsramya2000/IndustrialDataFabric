@@ -104,7 +104,7 @@ export default function AdvantagesSection() {
     return (
       <section className="advantages-section relative overflow-hidden">
         {/* Background Video */}
-        <video
+        {/* <video
           ref={videoRef}
           autoPlay
           loop
@@ -115,7 +115,7 @@ export default function AdvantagesSection() {
           <source src="/background_video7.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <br/><br/><br/>
+        <br/><br/><br/> */}
         
   
         {/* Content */}
@@ -142,7 +142,6 @@ export default function AdvantagesSection() {
             </div>
           ))}
         </div>
-        <br/>
         <br/>
         <br/>
         <br/>

@@ -1,0 +1,56 @@
+/* ContactUsSection.css */
+
+.contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    background-color: black; /* deep black */
+    color: #E0E0E0;
+    gap: 2rem;
+  }
+  
+  .contact-heading {
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 450;
+    /* margin-bottom: 0.5rem; */
+    margin-left:4rem;
+    text-align: left;
+    color: white; /* purple accent */
+    /* padding-bottom: 1rem; */
+  }
+  
+  .contact-column {
+    flex: 1;
+    min-width: 100px;
+  }
+  
+  .contact-column h4 {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    margin-left: 4rem;
+    color: #E0E0E0;
+  }
+  
+  .contact-column ul {
+    list-style: none;
+    padding: 0;
+    
+    margin: 0;
+  }
+  
+  .contact-column li {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    color: #778899; /* secondary text */
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-left: 4rem;
+  }
+  
+  .contact-column li:hover {
+    color: #E040FB; /* magenta accent */
+  }
+  

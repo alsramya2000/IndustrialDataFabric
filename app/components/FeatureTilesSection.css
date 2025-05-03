@@ -232,5 +232,10 @@ body {
   transform: translateY(-8px);
   opacity: 1;
 }
-
+.button-wrapper {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  
 

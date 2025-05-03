@@ -2,16 +2,18 @@
 
 import styles from './HeroSection.module.css';
 import { motion } from "framer-motion";
+import AnimatedBackground from './AnimatedBackground'; // ✅ Import background
 
 export default function HeroSection() {
   return (
     <section className={styles.hero}>
-      
+      {/* ✅ Animated Background Canvas */}
+      <AnimatedBackground />
+
       {/* Navbar */}
       <nav className={styles.navbar}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <img src="/logo.png" alt="Data Destination Logo" style={{ height: '4rem' }} />
-            {/* <span className="text-xl font-semibold text-white">Data Destination</span> */}
+          <img src="/logo.png" alt="Data Destination Logo" style={{ height: '4rem' }} />
         </div>
 
         <div className={styles['nav-links']}>
@@ -52,8 +54,7 @@ export default function HeroSection() {
         </motion.button>
       </div>
 
-      {/* Glow Beam */}
-      <div className={styles['glow-line']} />
+      {/* ❌ Removed: <div className={styles['glow-line']} /> */}
     </section>
   );
 }

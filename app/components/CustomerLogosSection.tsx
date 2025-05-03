@@ -2,14 +2,12 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
 import './CustomerLogosSection.css';
-import AnimatedBackground from './AnimatedBackground';
 
 const imagePaths = [
   '/logobw4.png',
   '/logobw5.png',
-  '/logobw6.png'
+  '/logobw6.png',
 ];
 
 export default function CustomerLogosSection() {
@@ -18,35 +16,33 @@ export default function CustomerLogosSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % imagePaths.length);
-    }, 5000);
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <section className="customer-section blended-bg">
+    <section className="customer-section">
       <div className="left-pane">
-        <AnimatedBackground />
-        <div className="logo-wrapper">
-          {imagePaths.map((src, index) => (
-            <img
-              key={index}
-              src={src}
-              alt={`Customer logo ${index + 1}`}
-              className={`logo-image ${index === currentIndex ? 'visible' : ''}`}
-            />
-          ))}
-        </div>
+        <h2 className="customer-heading">Explore Our Customers→</h2>
+        <p className="customer-description">
+          Discover how industry leaders use our platform to transform operations, enhance insights, and power smart factories.
+        </p>
       </div>
-      <div className="right-pane blended-panel">
-        <div className="text-content">
-          <h2>Fueling the future of industrial intelligence.</h2>
-          <p>From agile innovators to energy giants,</p>
-          <p>we empower every step of the digital transformation journey.</p>
-          <motion.button whileHover={{ scale: 1.05 }} className="cta-button try-btn">
-            MEET OUR CUSTOMERS →
-          </motion.button>
-        </div>
+      <div className="right-pane">
+        {imagePaths.map((src, index) =>
+          index === currentIndex ? (
+            <div key={index} className="logo-container visible">
+              <div className="logo-wrapper">
+                <img src={src} alt={`Customer logo ${index + 1}`} className="logo-image" />
+              </div>
+              <div className="button-wrapper">
+                <button className="try-btn">EXPLORE CUSTOMERS </button>
+              </div>
+            </div>
+          ) : null
+        )}
       </div>
+      
     </section>
   );
 }

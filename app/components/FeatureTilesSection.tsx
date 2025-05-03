@@ -95,10 +95,10 @@ export default function FeatureTilesSection() {
 
 </button>
 
-        <div className="cta-options">
+        {/* <div className="cta-options">
           <button className="cta-secondary filled">Talk to an Expert<span className="arrow">→</span></button>
           <button className="cta-secondary">Get an Enterprise Trial<span className="arrow">→</span></button>
-        </div>
+        </div> */}
       </div>
 </section>
   );

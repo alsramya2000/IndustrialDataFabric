@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import styles from './HeroSection.module.css'; // Import styles
 
 export default function AnimatedBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -41,13 +42,11 @@ export default function AnimatedBackground() {
         centerX + 400 + offsetX, centerY + 400 + offsetY
       );
 
-      flameGradient.addColorStop(0, 'rgba(0, 0, 128, 0.0)');       // Navy blue transparent
-      flameGradient.addColorStop(0.3, 'rgba(75, 0, 130, 0.3)');    // Dark violet glow
-      flameGradient.addColorStop(0.5, 'rgba(106, 6, 124, 0.547)');  // Purple center
-      flameGradient.addColorStop(0.7, 'rgba(75, 0, 130, 0.3)');    // Dark violet again
-      flameGradient.addColorStop(1, 'rgba(0, 0, 128, 0.0)');       // Navy blue transparent
-      
-
+      flameGradient.addColorStop(0, 'rgba(0, 0, 128, 0.0)');
+      flameGradient.addColorStop(0.3, 'rgba(75, 0, 130, 0.3)');
+      flameGradient.addColorStop(0.5, 'rgba(106, 6, 124, 0.547)');
+      flameGradient.addColorStop(0.7, 'rgba(75, 0, 130, 0.3)');
+      flameGradient.addColorStop(1, 'rgba(0, 0, 128, 0.0)');
 
       ctx.fillStyle = flameGradient;
       ctx.fillRect(0, 0, width, height);
@@ -76,7 +75,7 @@ export default function AnimatedBackground() {
   return (
     <canvas
       ref={canvasRef}
-      className="animated-canvas"
+      className={styles['animated-canvas']} // ✅ Correct usage
     />
   );
 }
