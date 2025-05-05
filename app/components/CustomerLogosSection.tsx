@@ -42,6 +42,12 @@ export default function CustomerLogosSection() {
           ) : null
         )}
       </div>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       
     </section>
   );

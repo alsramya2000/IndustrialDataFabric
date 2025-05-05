@@ -54,7 +54,7 @@ export default function HeroSection() {
         </motion.button>
       </div>
 
-      {/* ❌ Removed: <div className={styles['glow-line']} /> */}
+     
     </section>
   );
 }

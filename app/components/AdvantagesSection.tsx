@@ -120,6 +120,7 @@ export default function AdvantagesSection() {
   
         {/* Content */}
         <div className="advantages-wrapper relative z-10">
+            
           <h2 className="advantages-heading">Still searching?<br/> We’ve got what the others missed🚀</h2>
           {advantages.map((adv, index) => (
             <div

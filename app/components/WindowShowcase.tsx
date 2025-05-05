@@ -49,7 +49,7 @@ export default function WindowShowcase() {
                 initial={{ x: 300, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 exit={{ x: -300, opacity: 0 }}
-                transition={{ duration: 0.6, ease: "easeInOut" }}
+                transition={{ duration: 0.4, ease: "easeInOut" }}
                 />
             </AnimatePresence>
             </div>
@@ -62,13 +62,13 @@ export default function WindowShowcase() {
           onClick={() => handleSwitch(0)}
           className={activeIndex === 0 ? styles.activeButton : styles.button}
         >
-          Simulation Monitor
+          MONITOR
         </button>
         <button
           onClick={() => handleSwitch(1)}
           className={activeIndex === 1 ? styles.activeButton : styles.button}
         >
-          Simulation Server
+          SERVER
         </button>
       </div>
       <br/>

@@ -34,8 +34,8 @@ export default function AnimatedBackground() {
       const centerX = width / 2;
       const centerY = height / 2;
 
-      const offsetX = Math.sin(time * 0.002 + mouseX * 0.001) * 100 + (mouseX - centerX) * 0.05;
-      const offsetY = Math.cos(time * 0.003 + mouseY * 0.001) * 100 + (mouseY - centerY) * 0.05;
+      const offsetX = Math.sin(time * 0.002 + mouseX * 0.003) * 100 + (mouseX - centerX) * 0.05;
+      const offsetY = Math.cos(time * 0.003 + mouseY * 0.003) * 100 + (mouseY - centerY) * 0.05;
 
       const flameGradient = ctx.createLinearGradient(
         centerX - 400 + offsetX, centerY - 400 + offsetY,

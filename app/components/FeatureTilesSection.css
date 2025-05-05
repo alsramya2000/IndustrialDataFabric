@@ -26,7 +26,7 @@ body {
   flex: 1 1 300px;
   max-width: 400px;
   min-height: 600px;
-  background: linear-gradient(180deg, #111111, #1d0b2e);
+  background: linear-gradient(180deg, #111111, #2d0946);
   padding: 2rem;
   border-radius: 1rem;
   color: #E0E0E0;
@@ -93,7 +93,7 @@ body {
 
 .feature-tile:hover {
   transform: scale(1.02);
-  box-shadow: 0 0 12px #7C4DFF88;
+  box-shadow: 0 0 12px #9e49f488;
 }
 
 .tile-text h3 {
@@ -126,6 +126,7 @@ body {
     border: 1px solid #444;
     padding: 1rem 2rem;
     border-radius: 9999px;
+    font-family: 'Poppins', sans-serif;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -137,6 +138,7 @@ body {
     display: inline-block;
     opacity: 0;
     transform: translateY(20px);
+    padding: 0;
     animation: fadeInUp 0.4s forwards;
   }
   
@@ -232,10 +234,5 @@ body {
   transform: translateY(-8px);
   opacity: 1;
 }
-.button-wrapper {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-  }
-  
+
 
